@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav.xml"
+    app:startDestination="@id/dataListFragment">
+
+    <fragment
+        android:id="@+id/dataListFragment"
+        android:name="com.example.volleypostsave.fragments.DataListFragment"
+        android:label="fragment_data_list"
+        tools:layout="@layout/fragment_data_list" >
+        <action
+            android:id="@+id/action_dataListFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_dataListFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.volleypostsave.fragments.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.volleypostsave.fragments.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+</navigation>
